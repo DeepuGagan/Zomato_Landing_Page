@@ -8,6 +8,11 @@ body{
     font-family: 'Merriweather', serif;
     background-color: rgb(210, 233, 255);
 }
+button{
+  border: none;
+  cursor: pointer;
+}
+
 .container{
     max-width: 100%px;
     padding: 0 20px;
@@ -31,7 +36,9 @@ body{
     display: flex; 
     justify-content: space-around;
     align-items: center;
-    background-color: #fff;
+    background-color: rgb(235, 246, 255);
+    height: 100px;
+    position:static;
 }
 
 .navbar__brand{
@@ -70,6 +77,7 @@ body{
     margin-top: 50px;
     margin-bottom: 45px;
     text-align: center;
+    color: azure;
 }
 
 .food__card{
@@ -98,6 +106,7 @@ body{
  /*Flexxxx*/
 .restaurant__images__container{
     width: 100%;
+    margin-top: 2rem;
 }
 
 .restaurant__text{
@@ -140,6 +149,97 @@ body{
     margin-bottom: 3px;
 }
 
+.text-xl{
+    font-size: 20px;
+}
+
+.email__subcribe__container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.email__subcribe__input__field{
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.email__input{
+    border: 1px solid #ee89a0;
+    background-color: #fcedf0;
+    color: #1d3557;
+    padding: 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.quote__container{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin-top: 4rem;
+    background: url("https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80")
+    center center / cover no-repeat;
+    border-radius: 5px;  
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: -200;
+}
+
+.quote_image_overlay{
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    border-radius: 13px;
+    background-color: #0a4065;
+    opacity: 49%;
+    z-index: -5;
+    
+}
+
+.quote_image_text{
+    color: #fff;
+    z-index: 3;
+    margin: 0 1rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.footer__container{
+    background-image:linear-gradient(
+        to right,
+        #ff512f 0%,
+        #e96772 51%,
+        #ff512f 100%
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem 1rem 0 0;
+    margin-top: 4rem;
+}
+
+.footer__image{
+    filter: brightness(0) invert(1);
+  }
+
+.footer__menu{
+    color: #fff;
+    list-style-type: none;
+    margin-top: -1rem;
+    margin-bottom: 20px;
+ }
+ .footer__menu li{
+   margin: 5px 0;
+ }
+
+
 
 @media (min-width: 768px) {
     .navbar{
@@ -169,11 +269,11 @@ body{
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 102%;
         background-image:linear-gradient(
             to right,
             #ff512f 0%,
-            #e96772 51%,
+            #000000 51%,
             #ff512f 100%
         );
         z-index: -1;
@@ -188,6 +288,25 @@ body{
         font-size: 40px;
         font-weight: 900;
     }
+    .text-xl{
+        font-size: 30px;
+    }
+    .email__input{
+        width: 20rem;
+    }
+    .quote_image_text{
+        font-size: 30px;
+    }
+
+    .footer__container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly; 
+      }
+      .footer__menu{
+        margin-bottom: 0;
+      }
+    
 
 }
 
@@ -206,7 +325,7 @@ body{
         max-width: 900px;
     }
     .hero__container{
-        font-size: 40px;
+        font-size: 25px;
     }
 }
 
